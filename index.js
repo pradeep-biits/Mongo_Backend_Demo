@@ -59,4 +59,13 @@ app.post("/postmethod", async (req, resp) => {
   resp.send(result);
 });
 
+app.get("/", (req, resp) => {
+  resp.send(" Home Page");
+});
+
+app.get("*", (req, resp) => {
+  resp.send("404 Error");
+});
+
+
 app.listen(4500);
